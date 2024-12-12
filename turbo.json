@@ -1,0 +1,35 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        "build/**",
+        ".next"
+      ],
+      "inputs": [
+        "**/*.{html,cjs,css,js,json,md,mdx,mjs,scss,ts,tsx,yaml}"
+      ],
+      "outputLogs": "new-only"
+    },
+    "lint": {
+      "inputs": [
+        "*.{html,cjs,css,js,json,md,mdx,mjs,scss,ts,tsx,yaml}",
+        "src/**/*"
+      ],
+      "outputLogs": "new-only"
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "typecheck": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

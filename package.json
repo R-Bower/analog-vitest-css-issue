@@ -1,0 +1,40 @@
+{
+  "name": "@copper-lion/project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "list-mismatches": "syncpack list-mismatches --source 'packages/**/*' ",
+    "fix-mismatches": "syncpack fix-mismatches --source 'packages/**/*' ",
+    "start": "pnpm run -C packages/mobile-bar-app start",
+    "build": "cross-env FORCE_COLOR=1 turbo run build --cache-dir=.turbo-cache",
+    "dev": "cross-env FORCE_COLOR=1 DEV=true turbo run dev --cache-dir=.turbo-cache",
+    "lint": "cross-env FORCE_COLOR=1 turbo run lint --cache-dir=.turbo-cache --no-daemon --continue",
+    "lint:cache": "eslint --quiet --cache --ext js,ts,tsx,md,mdx,html .",
+    "typecheck": "cross-env FORCE_COLOR=1 DEV=true turbo run typecheck --cache-dir=.turbo-cache",
+    "add-component": "pnpm run -C packages/mobile-bar-app add-component"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.14",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-rbower-typescript": "^3.0.1",
+    "eslint-plugin-comment-length": "^1.7.3",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.16.5",
+    "turbo": "~2.0.4",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "pnpm@9.13.2"
+}

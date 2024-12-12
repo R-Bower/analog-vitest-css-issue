@@ -1,0 +1,4 @@
+node_modules
+_legacy
+build
+.eslintcache
