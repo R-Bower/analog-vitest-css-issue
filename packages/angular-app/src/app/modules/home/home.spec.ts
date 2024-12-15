@@ -9,4 +9,7 @@ describe("home page", () => {
 
     expect(screen.getByText("Home Page")).toBeVisible()
   })
+
+  // start in watch mode and uncomment this test.  It does not run.
+  // test("asd", async () => {})
 })

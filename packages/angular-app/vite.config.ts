@@ -10,7 +10,7 @@ export default defineConfig(({mode}) => ({
   test: {
     browser: {
       enabled: true,
-      headless: false,
+      headless: true,
       name: "chromium",
       provider: "playwright",
     },
